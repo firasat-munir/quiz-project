@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { QuestionCard } from './components/QuestionCard';
 import { fetchQuestions, Difficulty, QuestionState } from './API';
+import { GlobalStyle, Wrapper } from './App.styles';
 
 const TOTAL_QUESTIONS = 10;
 
@@ -19,8 +20,6 @@ function App() {
   const [userAnswers,setUserAnswers]=useState<AnswerObject[]>([])
   const [score,setScore]=useState(0)
   const [gameOver,setGameOver]=useState(true)
-
-  console.log(questions)
 
   const startQuiz=async()=>{
     setLoading(true);
@@ -64,6 +63,9 @@ function App() {
   }
 
   return (
+    <>
+    <GlobalStyle />
+    <Wrapper>
     <div className="App">
       <h1>Quiz</h1>
       {gameOver || userAnswers.length===TOTAL_QUESTIONS ? (
@@ -88,6 +90,8 @@ function App() {
         <button className='next' onClick={nextQuestion}>Next</button>
       ):null}
     </div>
+    </Wrapper>
+    </>
   );
 }
 
