@@ -67,7 +67,7 @@ function App() {
     <GlobalStyle />
     <Wrapper>
     <div className="App">
-      <h1>Quiz</h1>
+      <h1>Quiz App</h1>
       {gameOver || userAnswers.length===TOTAL_QUESTIONS ? (
         <button className='start' onClick={startQuiz}>Begin Quiz</button>
       ): null}
@@ -89,6 +89,9 @@ function App() {
       {!gameOver && !loading && userAnswers.length === number+1 && number !== TOTAL_QUESTIONS - 1 ? (
         <button className='next' onClick={nextQuestion}>Next</button>
       ):null}
+    </div>
+    <div className='footer'>
+        <p>© 2022 <a href='https://github.com/firasat-munir'>Firasat Munir</a>. All Rights Reserved.</p>
     </div>
     </Wrapper>
     </>

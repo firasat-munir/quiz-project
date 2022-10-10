@@ -20,7 +20,8 @@ export const QuestionCard: React.FC<Props> = ({question,answers,callback,userAns
             <div>
                 {answers.map(answer => (
                     <ButtonWrapper 
-                        correct={userAnswer?.correct_answer === answer}
+                        key={answer}
+                        correct={userAnswer?.correctAnswer === answer}
                         userClicked={userAnswer?.answer === answer}
                         >
                         <button onClick={callback} value={answer} disabled={userAnswer}>

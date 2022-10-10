@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   max-width: 1100px;
-  background: #ebfeff;
+  background: #ffebd6;
   border-radius: 10px;
-  border: 2px solid #0085a3;
+  border: 2px solid #292622;
   padding: 20px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
@@ -21,7 +21,7 @@ type ButtonWrapperProps = {
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   transition: all 0.3s ease;
   :hover {
-    opacity: 0.8;
+    opacity: 0.7;
   }
   button {
     cursor: pointer;
@@ -35,7 +35,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
         ? 'linear-gradient(90deg, #56FFA4, #59BC86)'
         : !correct && userClicked
         ? 'linear-gradient(90deg, #FF5656, #C16868)'
-        : 'linear-gradient(90deg, #56ccff, #6eafb4)'};
+        : 'linear-gradient(90deg, #635852, #fae5d9)'};
     border: 3px solid #ffffff;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
